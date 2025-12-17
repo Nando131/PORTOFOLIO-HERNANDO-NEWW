@@ -1,302 +1,302 @@
-/* app/globals.css */
-html {
-    scroll-behavior: smooth; /* MENGAKTIFKAN SMOOTH SCROLL */
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-
-/* Gradient yang menyatu di seluruh halaman */
-.layout-container {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #e0f7fa 0%, #e8eaf6 100%); 
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    padding-top: 64px; /* Kompensasi tinggi header */
-    flex-grow: 1;
-    width: 100%;
-    /* FIX: Hapus padding horizontal di sini untuk kontrol yang lebih baik di section components */
-    padding-left: 0; 
-    padding-right: 0;
-}
-
-/* --- PERBAIKAN SPASI & TATA LETAK GLOBAL --- */
-
-/* Mengurangi margin default pada Heading/Title dan Paragraph Ant Design */
-.ant-typography h1, 
-.ant-typography h2, 
-.ant-typography h3, 
-.ant-typography h4, 
-.ant-typography h5,
-.ant-typography p {
-    margin-top: 0 !important;
-    margin-bottom: 0.5em !important; /* Standar 0.5em untuk sedikit jarak yang konsisten */
-}
-
-/* Penyesuaian Style Menu Ant Design (Header) */
-.ant-menu-dark .ant-menu-item a {
-    color: rgba(255, 255, 255, 0.75) !important;
-    font-weight: 500;
-}
-
-.ant-menu-dark .ant-menu-item-selected,
-.ant-menu-dark .ant-menu-item:hover {
-    color: #fff !important;
-    background-color: transparent !important;
-    border-bottom: 2px solid #1890ff; 
-}
-
-/* --- CSS UNTUK ANIMASI PARTIKEL (Bintang Jatuh Sederhana) --- */
-@keyframes float {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-        opacity: 1;
-        border-radius: 50%;
+    /* app/globals.css */
+    html {
+        scroll-behavior: smooth; /* MENGAKTIFKAN SMOOTH SCROLL */
     }
-    100% {
-        transform: translateY(-1000px) rotate(360deg);
-        opacity: 0;
-        border-radius: 60%;
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     }
-}
 
-.particles-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 1;
-}
+    /* Gradient yang menyatu di seluruh halaman */
+    .layout-container {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #e0f7fa 0%, #e8eaf6 100%); 
+        display: flex;
+        flex-direction: column;
+    }
 
-.particle {
-    position: absolute;
-    bottom: -100px;
-    width: 10px;
-    height: 10px;
-    background: rgba(24, 144, 255, 0.5); 
-    list-style: none;
-    animation: float 25s infinite linear;
-}
+    main {
+        padding-top: 64px; /* Kompensasi tinggi header */
+        flex-grow: 1;
+        width: 100%;
+        /* FIX: Hapus padding horizontal di sini untuk kontrol yang lebih baik di section components */
+        padding-left: 0; 
+        padding-right: 0;
+    }
 
-.particle:nth-child(1) {
-    left: 25%;
-    width: 8px;
-    height: 8px;
-    animation-delay: 0s;
-    animation-duration: 15s;
-}
-.particle:nth-child(2) {
-    left: 10%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 2s;
-    animation-duration: 12s;
-}
-.particle:nth-child(3) {
-    left: 70%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 4s;
-    animation-duration: 20s;
-}
-.particle:nth-child(4) {
-    left: 40%;
-    width: 6px;
-    height: 6px;
-    animation-delay: 0s;
-    animation-duration: 18s;
-}
-.particle:nth-child(5) {
-    left: 65%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 3s;
-    animation-duration: 14s;
-}
-.particle:nth-child(6) {
-    left: 75%;
-    width: 11px;
-    height: 11px;
-    animation-delay: 5s;
-    animation-duration: 28s;
-}
-.particle:nth-child(7) {
-    left: 35%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 7s;
-    animation-duration: 16s;
-}
-.particle:nth-child(8) {
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    animation-delay: 15s;
-    animation-duration: 25s;
-}
-.particle:nth-child(9) {
-    left: 20%;
-    width: 16px;
-    height: 16px;
-    animation-delay: 2s;
-    animation-duration: 35s;
-}
-.particle:nth-child(10) {
-    left: 85%;
-    width: 10px;
-    height: 10px;
-    animation-delay: 10s;
-    animation-duration: 10s;
-}
+    /* --- PERBAIKAN SPASI & TATA LETAK GLOBAL --- */
 
-/* ---------------------------------------------------------------------- */
-/* --- CSS UNTUK EFEK TEKS BERKILAU (SHINY TEXT) --- */
-/* ---------------------------------------------------------------------- */
+    /* Mengurangi margin default pada Heading/Title dan Paragraph Ant Design */
+    .ant-typography h1, 
+    .ant-typography h2, 
+    .ant-typography h3, 
+    .ant-typography h4, 
+    .ant-typography h5,
+    .ant-typography p {
+        margin-top: 0 !important;
+        margin-bottom: 0.5em !important; /* Standar 0.5em untuk sedikit jarak yang konsisten */
+    }
 
-/* DEFINE VARIABLE (DIUBAH KE SKEMA WARNA BIRU) */
-:root {
-    --shiny-color: #1890ff; /* Biru terang (Primary Ant Design) */
-    --shiny-shadow: #096dd9; /* Biru yang lebih gelap untuk bayangan */
-    --shiny-glare: rgba(255, 255, 255, 0.9); /* Kilauan ditingkatkan */
-    --shiny-font-size: 1em; 
-    --shiny-transition: 0.2s;
-    --shiny-padding: 0.5rem;
-}
+    /* Penyesuaian Style Menu Ant Design (Header) */
+    .ant-menu-dark .ant-menu-item a {
+        color: rgba(255, 255, 255, 0.75) !important;
+        font-weight: 500;
+    }
 
-.shiny-text-link {
-    --hover: 0.4; 
-    --pos: 0;
-    
-    padding: var(--shiny-padding);
-    border-radius: 8px;
-    text-decoration: none;
-    color: transparent;
-    position: relative;
-    transition: background var(--shiny-transition);
-    
-    display: inline-flex;
-    align-items: center;
+    .ant-menu-dark .ant-menu-item-selected,
+    .ant-menu-dark .ant-menu-item:hover {
+        color: #fff !important;
+        background-color: transparent !important;
+        border-bottom: 2px solid #1890ff; 
+    }
 
-    /* --- PERBAIKAN COLLISION V3: Menambah margin kanan yang lebih besar (0.5em) --- */
-    /* Ini memberi jarak ekstra agar teks di sebelahnya (koma) tidak bertabrakan */
-    margin-right: 0.5em; 
-    /* ------------------------------------------------------------------------------ */
-}
+    /* --- CSS UNTUK ANIMASI PARTIKEL (Bintang Jatuh Sederhana) --- */
+    @keyframes float {
+        0% {
+            transform: translateY(0px) rotate(0deg);
+            opacity: 1;
+            border-radius: 50%;
+        }
+        100% {
+            transform: translateY(-1000px) rotate(360deg);
+            opacity: 0;
+            border-radius: 60%;
+        }
+    }
 
-.shiny-text-link:hover {
-    --hover: 1; 
-    --pos: 1;
-    background: rgba(24, 144, 255, 0.05); /* Latar belakang biru transparan saat hover */
-}
+    .particles-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+    }
 
-.shiny-text-link:active {
-    --hover: 0;
-}
+    .particle {
+        position: absolute;
+        bottom: -100px;
+        width: 10px;
+        height: 10px;
+        background: rgba(24, 144, 255, 0.5); 
+        list-style: none;
+        animation: float 25s infinite linear;
+    }
 
-.shiny-text-link:active .shiny-text-glare {
-    --hover: 0;
-    --pos: 1;
-}
+    .particle:nth-child(1) {
+        left: 25%;
+        width: 8px;
+        height: 8px;
+        animation-delay: 0s;
+        animation-duration: 15s;
+    }
+    .particle:nth-child(2) {
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+    }
+    .particle:nth-child(3) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+        animation-duration: 20s;
+    }
+    .particle:nth-child(4) {
+        left: 40%;
+        width: 6px;
+        height: 6px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+    }
+    .particle:nth-child(5) {
+        left: 65%;
+        width: 15px;
+        height: 15px;
+        animation-delay: 3s;
+        animation-duration: 14s;
+    }
+    .particle:nth-child(6) {
+        left: 75%;
+        width: 11px;
+        height: 11px;
+        animation-delay: 5s;
+        animation-duration: 28s;
+    }
+    .particle:nth-child(7) {
+        left: 35%;
+        width: 15px;
+        height: 15px;
+        animation-delay: 7s;
+        animation-duration: 16s;
+    }
+    .particle:nth-child(8) {
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        animation-delay: 15s;
+        animation-duration: 25s;
+    }
+    .particle:nth-child(9) {
+        left: 20%;
+        width: 16px;
+        height: 16px;
+        animation-delay: 2s;
+        animation-duration: 35s;
+    }
+    .particle:nth-child(10) {
+        left: 85%;
+        width: 10px;
+        height: 10px;
+        animation-delay: 10s;
+        animation-duration: 10s;
+    }
 
-/* Teks Utama (Menampilkan warna dan bayangan) */
-.shiny-text {
-    display: inline-block;
-    font-size: var(--shiny-font-size);
-    font-weight: 900;
-    transition: all var(--shiny-transition);
-    text-decoration: none;
-    color: var(--shiny-color); 
-    
-    /* Efek Bayangan */
-    text-shadow:
-        calc(var(--hover) * (-0.02em)) calc(var(--hover) * (0.02em)) var(--shiny-shadow),
-        calc(var(--hover) * (-0.04em)) calc(var(--hover) * (0.04em)) var(--shiny-shadow),
-        calc(var(--hover) * (-0.06em)) calc(var(--hover) * (0.06em)) var(--shiny-shadow),
-        calc(var(--hover) * (-0.08em)) calc(var(--hover) * (0.08em)) var(--shiny-shadow),
-        calc(var(--hover) * (-0.10em)) calc(var(--hover) * (0.10em)) var(--shiny-shadow);
+    /* ---------------------------------------------------------------------- */
+    /* --- CSS UNTUK EFEK TEKS BERKILAU (SHINY TEXT) --- */
+    /* ---------------------------------------------------------------------- */
+
+    /* DEFINE VARIABLE (DIUBAH KE SKEMA WARNA BIRU) */
+    :root {
+        --shiny-color: #1890ff; /* Biru terang (Primary Ant Design) */
+        --shiny-shadow: #096dd9; /* Biru yang lebih gelap untuk bayangan */
+        --shiny-glare: rgba(255, 255, 255, 0.9); /* Kilauan ditingkatkan */
+        --shiny-font-size: 1em; 
+        --shiny-transition: 0.2s;
+        --shiny-padding: 0.5rem;
+    }
+
+    .shiny-text-link {
+        --hover: 0.4; 
+        --pos: 0;
         
-    /* Efek Translate (Geser) */
-    transform: translate(calc(var(--hover) * 0.10em), calc(var(--hover) * -0.10em));
-}
+        padding: var(--shiny-padding);
+        border-radius: 8px;
+        text-decoration: none;
+        color: transparent;
+        position: relative;
+        transition: background var(--shiny-transition);
+        
+        display: inline-flex;
+        align-items: center;
 
-/* Teks Glare (Efek Kilauan Bergerak) */
-.shiny-text-glare {
-    position: absolute;
-    inset: var(--shiny-padding);
-    background: 
-        linear-gradient(
-            108deg,
-            transparent 0 55%,
-            var(--shiny-glare) 55% 60%,
-            transparent 60% 70%,
-            var(--shiny-glare) 70% 85%,
-            transparent 85%
-        ) calc(var(--pos) * -200%) 0% / 200% 100%, 
-        var(--shiny-color);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    z-index: 2;
-    text-shadow: none;
-    
-    font-size: var(--shiny-font-size);
-    font-weight: 900;
-    
-    transform: translate(calc(var(--hover) * 0.10em), calc(var(--hover) * -0.10em));
-    transition: transform var(--shiny-transition), background-position 0s;
-}
-
-.shiny-text-link:hover .shiny-text-glare {
-    transition: transform var(--shiny-transition), background-position calc(var(--hover) * 1.5s) calc(var(--hover) * 0.25s);
-}
-
-
-/* SVG Sparkles */
-.shiny-text-link svg {
-    position: absolute;
-    z-index: 3;
-    width: 0.5em; 
-    aspect-ratio: 1;
-}
-
-.shiny-text-link svg path {
-    fill: var(--shiny-glare);
-}
-
-/* Sparkle Animation */
-.shiny-text-link:hover svg {
-    animation: sparkle 0.75s calc((var(--delay-step) * var(--d)) * 1s) both;
-}
-
-@keyframes sparkle {
-    50% {
-        transform: translate(-50%, -50%) scale(var(--s, 1));
+        /* --- PERBAIKAN COLLISION V3: Menambah margin kanan yang lebih besar (0.5em) --- */
+        /* Ini memberi jarak ekstra agar teks di sebelahnya (koma) tidak bertabrakan */
+        margin-right: 0.5em; 
+        /* ------------------------------------------------------------------------------ */
     }
-}
 
-.shiny-text-link svg {
-    --delay-step: 0.15;
-    top: calc(var(--y, 50) * 1%);
-    left: calc(var(--x, 0) * 1%);
-    transform: translate(-50%, -50%) scale(0);
-}
+    .shiny-text-link:hover {
+        --hover: 1; 
+        --pos: 1;
+        background: rgba(24, 144, 255, 0.05); /* Latar belakang biru transparan saat hover */
+    }
 
-/* Posisi Masing-Masing Sparkle */
-.shiny-text-link svg:nth-of-type(1) { --x: 0; --y: 20; --s: 1.1; --d: 1; }
-.shiny-text-link svg:nth-of-type(2) { --x: 15; --y: 80; --s: 1.25; --d: 2; }
-.shiny-text-link svg:nth-of-type(3) { --x: 45; --y: 40; --s: 1.1; --d: 3; }
-.shiny-text-link svg:nth-of-type(4) { --x: 75; --y: 60; --s: 0.9; --d: 2; }
-.shiny-text-link svg:nth-of-type(5) { --x: 100; --y: 30; --s: 0.8; --d: 4; }
+    .shiny-text-link:active {
+        --hover: 0;
+    }
 
-/* Menyesuaikan ukuran font ShinyText agar cocok dengan Title level 1 (DIKECILKAN) */
-.text-xl {
-    --shiny-font-size: 1.2em; 
-}
+    .shiny-text-link:active .shiny-text-glare {
+        --hover: 0;
+        --pos: 1;
+    }
+
+    /* Teks Utama (Menampilkan warna dan bayangan) */
+    .shiny-text {
+        display: inline-block;
+        font-size: var(--shiny-font-size);
+        font-weight: 900;
+        transition: all var(--shiny-transition);
+        text-decoration: none;
+        color: var(--shiny-color); 
+        
+        /* Efek Bayangan */
+        text-shadow:
+            calc(var(--hover) * (-0.02em)) calc(var(--hover) * (0.02em)) var(--shiny-shadow),
+            calc(var(--hover) * (-0.04em)) calc(var(--hover) * (0.04em)) var(--shiny-shadow),
+            calc(var(--hover) * (-0.06em)) calc(var(--hover) * (0.06em)) var(--shiny-shadow),
+            calc(var(--hover) * (-0.08em)) calc(var(--hover) * (0.08em)) var(--shiny-shadow),
+            calc(var(--hover) * (-0.10em)) calc(var(--hover) * (0.10em)) var(--shiny-shadow);
+            
+        /* Efek Translate (Geser) */
+        transform: translate(calc(var(--hover) * 0.10em), calc(var(--hover) * -0.10em));
+    }
+
+    /* Teks Glare (Efek Kilauan Bergerak) */
+    .shiny-text-glare {
+        position: absolute;
+        inset: var(--shiny-padding);
+        background: 
+            linear-gradient(
+                108deg,
+                transparent 0 55%,
+                var(--shiny-glare) 55% 60%,
+                transparent 60% 70%,
+                var(--shiny-glare) 70% 85%,
+                transparent 85%
+            ) calc(var(--pos) * -200%) 0% / 200% 100%, 
+            var(--shiny-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        z-index: 2;
+        text-shadow: none;
+        
+        font-size: var(--shiny-font-size);
+        font-weight: 900;
+        
+        transform: translate(calc(var(--hover) * 0.10em), calc(var(--hover) * -0.10em));
+        transition: transform var(--shiny-transition), background-position 0s;
+    }
+
+    .shiny-text-link:hover .shiny-text-glare {
+        transition: transform var(--shiny-transition), background-position calc(var(--hover) * 1.5s) calc(var(--hover) * 0.25s);
+    }
+
+
+    /* SVG Sparkles */
+    .shiny-text-link svg {
+        position: absolute;
+        z-index: 3;
+        width: 0.5em; 
+        aspect-ratio: 1;
+    }
+
+    .shiny-text-link svg path {
+        fill: var(--shiny-glare);
+    }
+
+    /* Sparkle Animation */
+    .shiny-text-link:hover svg {
+        animation: sparkle 0.75s calc((var(--delay-step) * var(--d)) * 1s) both;
+    }
+
+    @keyframes sparkle {
+        50% {
+            transform: translate(-50%, -50%) scale(var(--s, 1));
+        }
+    }
+
+    .shiny-text-link svg {
+        --delay-step: 0.15;
+        top: calc(var(--y, 50) * 1%);
+        left: calc(var(--x, 0) * 1%);
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    /* Posisi Masing-Masing Sparkle */
+    .shiny-text-link svg:nth-of-type(1) { --x: 0; --y: 20; --s: 1.1; --d: 1; }
+    .shiny-text-link svg:nth-of-type(2) { --x: 15; --y: 80; --s: 1.25; --d: 2; }
+    .shiny-text-link svg:nth-of-type(3) { --x: 45; --y: 40; --s: 1.1; --d: 3; }
+    .shiny-text-link svg:nth-of-type(4) { --x: 75; --y: 60; --s: 0.9; --d: 2; }
+    .shiny-text-link svg:nth-of-type(5) { --x: 100; --y: 30; --s: 0.8; --d: 4; }
+
+    /* Menyesuaikan ukuran font ShinyText agar cocok dengan Title level 1 (DIKECILKAN) */
+    .text-xl {
+        --shiny-font-size: 1.2em; 
+    }

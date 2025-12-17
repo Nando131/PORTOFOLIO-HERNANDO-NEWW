@@ -1,8 +1,7 @@
 // app/layout.js
 import './globals.css';
 import AntdRegistry from './AntdRegistry';
-import Header from './(ui)/Header';
-import Footer from './(ui)/Footer';
+import LayoutComponents from './(ui)/LayoutComponents';
 
 export const metadata = {
   title: 'Portofolio Developer | Nando Dev',
@@ -11,20 +10,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body>
         <AntdRegistry>
-          <div className="layout-container" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-            
-            <Header /> 
-            
-            <main style={{ flexGrow: 1, marginTop: 64 }}> 
-              {children}
-            </main>
-
-            <Footer />
-            
-          </div>
+          <LayoutComponents>
+            {children}
+          </LayoutComponents>
         </AntdRegistry>
       </body>
     </html>
